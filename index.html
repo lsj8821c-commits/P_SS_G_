@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>러너의 하루</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header class="game__header">
+        <h1>러너의 하루</h1>
+        <p>방향키 또는 WASD로 움직이세요. 각 장소에 닿으면 다음 단계로 진행합니다.</p>
+      </header>
+      <section class="hud">
+        <div>단계: <span id="stage">집</span></div>
+        <div>스태미나: <span id="stamina">50</span></div>
+        <div>인벤토리: <span id="inventory">없음</span></div>
+      </section>
+      <section class="world" aria-label="게임 맵">
+        <div class="zone" data-zone="home">집</div>
+        <div class="zone" data-zone="river">강</div>
+        <div class="zone" data-zone="cafe">카페</div>
+        <div class="zone" data-zone="shop">트레일 러닝 샵</div>
+        <div class="zone" data-zone="mountain">산</div>
+        <div class="zone" data-zone="pavilion">팔각정</div>
+        <div id="player" aria-label="플레이어"></div>
+      </section>
+      <section class="log">
+        <h2>일지</h2>
+        <ul id="log"></ul>
+      </section>
+      <button id="reset" type="button">다시 시작</button>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
